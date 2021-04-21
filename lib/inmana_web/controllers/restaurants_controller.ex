@@ -7,7 +7,7 @@ defmodule InmanaWeb.RestaurantsController do
   action_fallback FallbackController
 
   def create(conn, params) do
-    with {:ok, %Restaurant{} = restaurant} <- Inmana.create_restautante(params) do
+    with {:ok, %Restaurant{} = restaurant} <- Inmana.create_restautant(params) do
       conn
       |> put_status(:created)
       |> render("create.json", restaurant: restaurant)
